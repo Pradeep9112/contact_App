@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <link rel="stylesheet" href="/contactinfo.css">
+</head>
+<body>
+    <div class="contact-info-wrapper">
+        {{#if payload}}
+        <div>
+            <h1>Contact Info</h1>
+            <div class="list">
+                <span><strong>First Name:</strong> {{payload.fname}}</span>
+                <span><strong>Last Name:</strong> {{payload.lname}}</span>
+                <span><strong>Number:</strong> {{payload.num}}</span>
+                <span><strong>Saved Location:</strong> {{payload.loc}}</span>
+            </div>
+        </div>
+        {{else}}
+        <h1 class="no-contact">No Such Contact</h1>
+        {{/if}}
+    </div>
+</body>
+</html>

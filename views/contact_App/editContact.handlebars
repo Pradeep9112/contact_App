@@ -1,0 +1,32 @@
+<div class="page-container">
+    {{#if payload}}
+    <form action="/api/edit/{{payload._id}}" method="post">
+        <fieldset>
+            <legend>Contact Information</legend>
+            
+            <!-- First Name -->
+            <label for="fname">First Name:</label>
+            <input type="text" value="{{payload.fname}}" name="fname" id="fname" placeholder="Enter first name" required>
+            
+            <!-- Last Name -->
+            <label for="lname">Last Name:</label>
+            <input type="text" value="{{payload.lname}}" name="lname" id="lname" placeholder="Enter last name" required>
+            
+            <!-- Mobile -->
+            <label for="mobile">Mobile:</label>
+            <input type="tel" value="{{payload.num}}" pattern="[0-9]{10}" name="num" id="mobile" placeholder="Enter mobile number" required>
+            
+            <!-- Options -->
+            <label for="options">Choose a Location:</label>
+            <select id="options" name="loc" required>
+                <option value="mobile">Mobile</option>
+                <option value="sim">SIM</option>
+                <option value="email">Mail</option>
+            </select>
+            
+            <!-- Submit Button -->
+            <button type="submit">click to update</button>
+        </fieldset>
+    </form>
+    {{/if}}
+</div>

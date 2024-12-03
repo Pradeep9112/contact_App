@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+   width: auto;
+    /* max-width: 500px; */
+}
+
+.card-header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 15px;
+ border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-body {
+    padding: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body p {
+    margin: 10px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+a {
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Base button styles */
+.btn {
+    text-decoration: none;
+    padding: 12px 18px; /* Slightly increased padding for better button size */
+    border-radius: 6px; /* Slightly rounded corners for a smoother look */
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: 600; /* Slightly bolder text for better emphasis */
+    text-align: center;
+    display: inline-block;
+    cursor: pointer; /* Ensures the button feels clickable */
+    transition: all 0.3s ease; /* Smooth transition for background, transform, and shadow */
+    letter-spacing: 1px; /* Adds a slight space between letters for modern styling */
+}
+
+/* Info Button */
+.btn-info {
+    background-color: #17a2b8; /* Soft blue color for Info */
+    color: white;
+    border: 1px solid transparent; /* Subtle border for a clean look */
+}
+
+.btn-info:hover {
+    background-color: #138496; /* Darker blue on hover */
+    transform: translateY(-3px); /* Subtle lift on hover for interactivity */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adding a shadow on hover for depth */
+}
+
+/* Edit Button */
+.btn-edit {
+    background-color: #ffc107; /* Yellow color for Edit */
+    color: white;
+    border: 1px solid transparent; /* Subtle border */
+}
+
+.btn-edit:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+    transform: translateY(-3px); /* Lifts the button slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+/* Delete Button */
+.btn-delete {
+    background-color: #dc3545; /* Red color for Delete */
+    color: white;
+    border: 1px solid transparent; /* Subtle border */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+}
+
+
+
+.no-content {
+    text-align: center;
+    color: #777;
+}

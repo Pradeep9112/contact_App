@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/viewcontact.css"> 
+</head>
+<body>
+  
+    <div class="container">
+       
+        {{#each payload}}
+        <div class="card">
+            <div class="card-header">
+                <h2>{{this.fname}} {{this.lname}}</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Number:</strong> {{this.num}}</p>
+                <p><strong>Saved location:</strong> {{this.loc}}</p>
+            </div>
+            <div class="card-footer">
+                <span><a href="/api/contact/{{this._id}}" class="btn-info">Info</a></span>
+                <span><a href="/api/edit/{{this._id}}" class="btn-edit">Edit</a></span>
+                <span><a href="/api/delete/{{this._id}}" class="btn-delete">Delete</a></span>
+            </div>
+        </div>
+        {{else}}
+        <h2 class="no-content">No contents available</h2>
+        {{/each}}
+    </div>
+</body>
+</html>

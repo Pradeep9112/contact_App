@@ -15,8 +15,15 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,'public'))) 
 
 let connectDb=async()=>{
-    await mongoose.connect(MONGODB_URI)
-    console.log('database connected')
+   await mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      }).then(() => {
+        console.log('MongoDB connected');
+      }).catch((err) => {
+        console.error('MongoDB connection error:', err);
+      });
+      
 }
 connectDb();
 app.get('/',(req,res)=>{
